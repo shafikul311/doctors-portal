@@ -1,9 +1,14 @@
 import React from 'react';
+import Hero from './Hero';
+import Info from './Info';
+import Service from './Service';
 
 const Home = () => {
     return (
         <div>
-            <h2 className="font-bold text-4xl text-center">Home Page</h2>            
+           <Hero/> 
+           <Info/>  
+           <Service/>      
         </div>
     );
 };
