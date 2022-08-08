@@ -1,14 +1,14 @@
 import React from 'react';
 import Hero from './Hero';
 import Info from './Info';
-import Service from './Service';
+import Services from './Services';
 
 const Home = () => {
     return (
-        <div>
+        <div className="px-12">
            <Hero/> 
            <Info/>  
-           <Service/>      
+           <Services></Services>
         </div>
     );
 };
