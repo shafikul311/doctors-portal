@@ -1,12 +1,13 @@
 import React from "react";
 import doctor from "../../assets/images/doctor.png";
 import appointment from "../../assets/images/appointment.png";
+import PrimaryButton from "../Shared/PrimaryButton";
 
 const MakeAppointment = () => {
    return (
       <section
          style={{ background: `url(${appointment})` }}
-         className="flex justify-center items-center my-24"
+         className="flex justify-center items-center my-26"
       >
          <div className="flex-1 hidden lg:block">
             <img src={doctor} alt="" className="mt-[-100px]" />
@@ -24,7 +25,7 @@ const MakeAppointment = () => {
                consectetur est vel ad sed maiores doloremque consequatur. Amet
                consequuntur quibusdam autem, quod maxime qui itaque quaerat.
             </p>
-            {/* <PrimaryButton>Get Started</PrimaryButton> */}
+            <PrimaryButton>Get Started</PrimaryButton>
          </div>
       </section>
    );

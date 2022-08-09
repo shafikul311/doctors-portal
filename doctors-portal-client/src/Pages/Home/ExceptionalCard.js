@@ -1,5 +1,6 @@
 import React from "react";
 import treatment from "../../assets/images/treatment.png";
+import PrimaryButton from "../Shared/PrimaryButton";
 
 const ExceptionalCard = () => {
    return (
@@ -17,7 +18,7 @@ const ExceptionalCard = () => {
                   assumenda excepturi exercitationem quasi. In deleniti eaque
                   aut repudiandae et a id nisi.
                </p>
-               <button class="btn btn-primary">Get Started</button>
+               <PrimaryButton>Book Now</PrimaryButton>
             </div>
          </div>
       </div>      
