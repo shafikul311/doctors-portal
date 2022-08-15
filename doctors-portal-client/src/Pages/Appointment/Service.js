@@ -10,7 +10,7 @@ const Service = ({ service, setTreatment }) => {
             </h2>
             <p className=" text-xs">
                {slots.length ? (
-                  <span> </span>
+                  <span> {slots[0]}</span>
                ) : (
                   <span className="text-red-500">Please try another date</span>
                )}
