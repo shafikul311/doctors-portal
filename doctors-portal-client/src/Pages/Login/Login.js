@@ -9,6 +9,8 @@ import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 
 const Login = () => {
+
+   // const navigate = useNavigate()
    const [signInWithGoogle, gUser, gLoading, gError] =
       useSignInWithGoogle(auth);
 
@@ -24,17 +26,15 @@ let signInError;
    if (loading || gLoading) {
       return <Loading/>;
    }
-
+   
    if (error || gError ) {
       signInError = <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
   }
-   if (user || gUser) {
-      return (
-         <div>
-            <p>Signed In User: {user.email}</p>
-         </div>
-      );
-   }
+  
+   // if (user || gUser) {
+   //    navigate("/appointment")
+   
+   // }
 
 
 
