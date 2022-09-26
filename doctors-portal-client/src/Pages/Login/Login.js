@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import auth from "../../firebase.inti";
 import {
    useSignInWithEmailAndPassword,
    useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 
 const Login = () => {
 
-   // const navigate = useNavigate()
+   const navigate = useNavigate();
+
+   const location = useLocation();
+
+
    const [signInWithGoogle, gUser, gLoading, gError] =
       useSignInWithGoogle(auth);
 
@@ -31,10 +35,6 @@ let signInError;
       signInError = <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
   }
   
-   // if (user || gUser) {
-   //    navigate("/appointment")
-   
-   // }
 
 
 
