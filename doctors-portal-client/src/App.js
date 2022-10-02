@@ -8,24 +8,29 @@ import Login from "./Pages/Login/Login";
 import {
    Routes,
    Route,
- } from "react-router-dom";
+} from "react-router-dom";
 import Navbar from "./Pages/Shared/Navbar";
 import SignUp from "./Pages/Login/SignUp";
+import RequireAuth from "./Pages/Login/RequireAuth";
 
 
 function App() {
    return (
       <div className="max-w-7xl mx-auto px-12">
-         <Navbar/>
+         <Navbar />
          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/appointment" element={<Appointment/>} />
-            <Route path="/dashboard" element={<Dashboard/>} />
-            <Route path="/login" element={<Login/>} />
-            <Route path="/signup" element={<SignUp/>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/appointment" element={
+               <RequireAuth>
+                  <Appointment />
+               </RequireAuth> }
+                />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
          </Routes>
-         
+
       </div>
    );
 }

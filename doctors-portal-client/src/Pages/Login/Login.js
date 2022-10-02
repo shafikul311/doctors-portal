@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import auth from "../../firebase.inti";
 import {
    useSignInWithEmailAndPassword,
@@ -14,6 +14,8 @@ const Login = () => {
 
    const location = useLocation();
 
+   let from = location.state?.from?.pathname || "/";
+
 
    const [signInWithGoogle, gUser, gLoading, gError] =
       useSignInWithGoogle(auth);
@@ -23,6 +25,7 @@ const Login = () => {
       handleSubmit,
       formState: { errors },
    } = useForm();
+
    const [signInWithEmailAndPassword, user, loading, error] =
       useSignInWithEmailAndPassword(auth);
 
@@ -35,13 +38,20 @@ let signInError;
       signInError = <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
   }
   
-
+if(user || gUser ){
+   navigate(from, {replace: true})
+}
 
 
    const onSubmit = (data) => {
       console.log(data);
       signInWithEmailAndPassword(data.email, data.password);
    };
+
+  
+
+
+ 
 
    return (
       <div className="flex h-5/6 justify-center item-center">
