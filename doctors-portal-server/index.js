@@ -16,8 +16,18 @@ async function run(){
   try {
     await client.connect();
     
-    const serviceCollections = await client.db("doctors_portal").collection('service');
-    console.log("db connected ")
+    const serviceCollections = client.db("doctors_portal").collection('service');
+    const bookingCollections = client.db("doctors_portal").collection('bookings');
+    // console.log("db connected ")
+
+    /**
+     * Api naming convention 
+     * app.get('/booking') // get all booking 
+     * app.get('/booking/:id') // get a specific booking          
+     * app.post('/booking') // post a new service         
+     * app.patch('/booking/:id') //  a specific booking          
+     * app.delete('/booking/:id') // get a specific booking          
+     * **/
 
     app.get('/service', async (req, res) => {
       const query = {}
@@ -25,6 +35,22 @@ async function run(){
       const service = await cursor.toArray();
       res.send(service);      
     })
+
+    app.post('/booking', async (req, res) => {
+      const booking = req.body;
+      const query = {treatment: booking.treatment, date: booking.date, patient: booking.patient}
+      const exists = await bookingCollections.findOne(query);
+      if(exists){
+        return res.send({success: false, booking: exists})
+      }
+      const result = bookingCollections.insertOne(booking);
+      res.send({success: true, result});
+
+    })
+    
+
+   
+    
 
   }
   finally {
