@@ -12,6 +12,7 @@ import {
 import Navbar from "./Pages/Shared/Navbar";
 import SignUp from "./Pages/Login/SignUp";
 import RequireAuth from "./Pages/Login/RequireAuth";
+import { ToastContainer} from 'react-toastify';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
          </Routes>
+         <ToastContainer />
 
       </div>
    );
