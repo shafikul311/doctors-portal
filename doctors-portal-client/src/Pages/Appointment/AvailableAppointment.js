@@ -10,7 +10,7 @@ const AvailableAppointment = ({ date }) => {
    const formattedDate = format(date, "PP");
 
    // here is used React query for data fetch 
-   const { isLoading, data: services, refetch } = useQuery(['available'], () =>
+   const { isLoading, data: services, refetch } = useQuery(['available', formattedDate], () =>
    fetch(`http://localhost:5000/available?date=${formattedDate}`).then(res =>
      res.json()
    )
