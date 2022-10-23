@@ -11,7 +11,7 @@ const Navbar = () => {
 
    const logout = () => {
       signOut(auth);
-    };
+   };
 
    const MenuItem = (
       <>
@@ -29,12 +29,12 @@ const Navbar = () => {
          </li>
          <li>
             <Link to="/login">Contract</Link>
-         </li>         
-         <li>
-            {user && <Link to="/dashboard">Dashboard</Link>}            
          </li>
          <li>
-             { user ? <button className="btn btn-ghost" onClick={logout} >LogOut</button> : <Link to="/login">Login</Link>}
+            {user && <Link to="/dashboard">Dashboard</Link>}
+         </li>
+         <li>
+            {user ? <button className="btn btn-ghost" onClick={logout} >LogOut</button> : <Link to="/login">Login</Link>}
          </li>
       </>
    );
@@ -71,6 +71,24 @@ const Navbar = () => {
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">{MenuItem}</ul>
+         </div>
+         <div className="navbar-end">
+            <label htmlFor="dashboard-sidebar" className="btn btn-ghost drawer-button lg:hidden">
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+               >f
+                  <path
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                     strokeWidth="2"
+                     d="M4 6h16M4 12h8m-8 6h16"
+                  />
+               </svg>
+            </label>
          </div>
       </div>
    );

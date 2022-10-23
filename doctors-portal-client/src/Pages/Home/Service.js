@@ -3,7 +3,6 @@ import React from "react";
 const Service = ({ service }) => {
    const { name, img } = service;
 //    console.log(service);
-
    return (
       <div className="card lg:max-w-lg bg-base-100 shadow-xl">
          <figure className="px-10 pt-10">
