@@ -7,18 +7,21 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
 
    const navigate = useNavigate();
 
    const location = useLocation();
+   
 
-   let from = location.state?.from?.pathname || "/";
+   let from = location?.state?.from?.pathname || "/";
 
 
    const [signInWithGoogle, gUser, gLoading, gError] =
       useSignInWithGoogle(auth);
+
 
    const {
       register,
@@ -28,6 +31,8 @@ const Login = () => {
 
    const [signInWithEmailAndPassword, user, loading, error] =
       useSignInWithEmailAndPassword(auth);
+   
+      const [ token] = useToken (user || gUser );
 
 let signInError;
    if (loading || gLoading) {
@@ -38,7 +43,7 @@ let signInError;
       signInError = <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
   }
   
-if(user || gUser ){
+if(token){
    navigate(from, {replace: true})
 }
 
@@ -47,11 +52,7 @@ if(user || gUser ){
       console.log(data);
       signInWithEmailAndPassword(data.email, data.password);
    };
-
-  
-
-
- 
+   
 
    return (
       <div className="flex h-5/6 justify-center item-center">
