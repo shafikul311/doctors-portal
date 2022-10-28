@@ -8,9 +8,7 @@ import Loading from '../Shared/Loading';
 const MyAppointment = () => {
     const [appointments, setAppointments] = useState([]);
     const [user, loading ] = useAuthState(auth);
-    const navigate = useNavigate();
-
-    
+    const navigate = useNavigate();    
 
     useEffect(() => {
       if(loading) {
