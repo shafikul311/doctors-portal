@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState} from "react";
 
 const useToken = user => {
     const [token, setToken ] = useState('');

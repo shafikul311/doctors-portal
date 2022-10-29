@@ -2,13 +2,14 @@ import { signOut } from 'firebase/auth';
 import React, { useState, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import auth from '../../firebase.inti';
+import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 
 const MyAppointment = () => {
     const [appointments, setAppointments] = useState([]);
     const [user, loading ] = useAuthState(auth);
-    const navigate = useNavigate();    
+    const navigate = useNavigate();   
+    // console.log(user) 
 
     useEffect(() => {
       if(loading) {
@@ -18,23 +19,23 @@ const MyAppointment = () => {
             fetch(`http://localhost:5000/booking?patient=${user.email}`,{
               method: 'GET',
               headers: {
-                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
               }
             }
             
             )
                 .then(res => {
-                  console.log('response');
+                  // console.log('response', res);
                   if(res.status === 401 || res.status === 403){
                     signOut(auth);
-      localStorage.removeItem('accessToken')
+                    localStorage.removeItem('accessToken')
                     navigate('/')
                     
                   }
                   return res.json()})
                 .then(data => setAppointments(data))
         }
-    }, [loading, user]);
+    }, [loading, navigate, user]);
 
    
     return (
@@ -44,7 +45,6 @@ const MyAppointment = () => {
             <div className="overflow-x-auto">
   <table className="table w-full">
     {/* <!-- head --> */}
-    {/* {!user || Loading } */}
 
     <thead>
       <tr>

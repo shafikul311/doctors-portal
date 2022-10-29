@@ -1,6 +1,5 @@
 import React from "react";
 
-import auth from "../../firebase.inti";
 import {
     useCreateUserWithEmailAndPassword,
    useSignInWithGoogle,
@@ -9,6 +8,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useToken from '../../hooks/useToken'
+import auth from "../../firebase.init";
 
 
 

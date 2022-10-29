@@ -3,7 +3,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import auth from "../../firebase.inti";
+import auth from "../../firebase.init";
 
 const BookingModal = ({ date, treatment, setTreatment, service, refetch }) => {
    const { _id, name, slots } = treatment;

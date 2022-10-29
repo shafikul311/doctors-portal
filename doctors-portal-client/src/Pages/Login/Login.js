@@ -1,5 +1,4 @@
 import React from "react";
-import auth from "../../firebase.inti";
 import {
    useSignInWithEmailAndPassword,
    useSignInWithGoogle,
@@ -8,6 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import useToken from "../../hooks/useToken";
+import auth from "../../firebase.init";
 
 const Login = () => {
 
@@ -32,7 +32,7 @@ const Login = () => {
    const [signInWithEmailAndPassword, user, loading, error] =
       useSignInWithEmailAndPassword(auth);
    
-      const [ token] = useToken (user || gUser );
+      const [ token] = useToken(user || gUser );
 
 let signInError;
    if (loading || gLoading) {
