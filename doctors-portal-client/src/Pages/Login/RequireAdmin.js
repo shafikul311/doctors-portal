@@ -12,6 +12,7 @@ const RequireAdmin = ({children}) => {
     const location = useLocation();
 
     if(loading || adminLoading){
+        
         return <Loading></Loading>
     }
 
