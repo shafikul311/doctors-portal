@@ -1,4 +1,5 @@
-"# Doctors Portals Full Stack MERN website" 
+ 
+<h2>Doctors Portals Full Stack MERN website</h2>
 <p>Technology used to build this web site --</p>
 <p>Features and functionality list implement for admin and users  --</p>
 <p>How company and users can be benifited used this website  --</p>
