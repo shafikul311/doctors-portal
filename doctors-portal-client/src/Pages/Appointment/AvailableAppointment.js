@@ -19,12 +19,7 @@ const AvailableAppointment = ({ date }) => {
  if(isLoading){
    return <Loading></Loading>
  }
-   //simple data fetch `
-   // useEffect(() => {   
-   //        fetch(`http://localhost:5000/available?date=${formattedDate}`)
-   //       .then((response) => response.json())
-   //       .then((data) => setServices(data));
-   // }, []);
+  
    return (
       <div>
          <h4 className="text-xl text-secondary text-center my-12">
