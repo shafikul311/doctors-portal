@@ -12,7 +12,7 @@ import {
 import Navbar from "./Pages/Shared/Navbar";
 import SignUp from "./Pages/Login/SignUp";
 import RequireAuth from "./Pages/Login/RequireAuth";
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import MyAppointment from "./Pages/Dashboard/MyAppointment";
 import MyReview from "./Pages/Dashboard/MyReview";
 import MyHistory from "./Pages/Dashboard/MyHistory";
@@ -33,21 +33,21 @@ function App() {
             <Route path="/appointment" element={
                <RequireAuth>
                   <Appointment />
-               </RequireAuth> }
-                />
+               </RequireAuth>}
+            />
             <Route path="/dashboard" element={
                <RequireAuth>
                   <Dashboard />
-               </RequireAuth> }>
-                  <Route index element={<MyAppointment></MyAppointment>}></Route>
-                  <Route path="review" element={<MyReview />}></Route>
-                  <Route path="history" element={<MyHistory />}></Route>
-                  <Route path="payment/:id" element={<Payment />}></Route>
+               </RequireAuth>}>
+               <Route index element={<MyAppointment></MyAppointment>}></Route>
+               <Route path="review" element={<MyReview />}></Route>
+               <Route path="history" element={<MyHistory />}></Route>
+               <Route path="payment/:id" element={<Payment />}></Route>
 
-                  <Route path="users" element={<RequireAdmin> <Users /> </RequireAdmin>}></Route>
-                  <Route path="addDoctor" element={<RequireAdmin> <AddDoctor /> </RequireAdmin>}></Route>
-                  <Route path="manageDoctor" element={<RequireAdmin> <ManageDoctor /> </RequireAdmin>}></Route>
-               </Route>
+               <Route path="users" element={<RequireAdmin> <Users /> </RequireAdmin>}></Route>
+               <Route path="addDoctor" element={<RequireAdmin> <AddDoctor /> </RequireAdmin>}></Route>
+               <Route path="manageDoctor" element={<RequireAdmin> <ManageDoctor /> </RequireAdmin>}></Route>
+            </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
          </Routes>
