@@ -19,7 +19,8 @@
         <li>Authenticated users can book appointment. </li>
         <li>user will get auto email for their booking confirmation.</li>
         <li>Authenticated user can pay for the booking using Card payment system.  </li>
+        </ol>
        
-    </ol>
+    
 <p> User and company will be benefited using this website. data info secured dashboard and secured payment system and easy booking system </p>
 <p> More Update will coming soon ..</p>
