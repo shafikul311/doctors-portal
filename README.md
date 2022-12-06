@@ -6,6 +6,7 @@
         <li>React Hooks</li>
         <li>Node js </li>
         <li>Express js</li>
+        <li>React Query</li>
         <li>Mongodb</li>
         <li>Firebase</li>
         <li>JWT</li>
