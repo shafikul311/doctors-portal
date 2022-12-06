@@ -24,5 +24,5 @@
         </ol>
        
     
-<p> User and company will be benefited using this website. data info secured dashboard and secured payment system and easy booking system </p>
+<p> User and company will be benefited using this website. data info secured dashboard and secured payment system and easyly can booking a service what he/she want. </p>
 <p> More Update will coming soon ..</p>
