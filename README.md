@@ -1,6 +1,12 @@
  
-<h2>Doctors portals MERN stack website </h2>
-<p>Technology used to build this website : </p>
+# Doctors portals MERN stack website
+
+## Technology used to build this website :
+
+**Client:** React, TailwindCSS, React Hooks, React Query, Firebase, JWT, stripe
+
+**Server:** Node, Express, sendGrid email sender
+<p> </p>
     <ol>
         <li>React js</li>
         <li>React Hooks</li>
