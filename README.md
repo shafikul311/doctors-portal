@@ -3,22 +3,9 @@
 
 ## Technology used to build this website :
 
-**Client:** React, TailwindCSS, React Hooks, React Query, Firebase, JWT, stripe
+**Client:** React, TailwindCSS, React Hooks, React Query, Firebase, JWT, stripe.
 
-**Server:** Node, Express, sendGrid email sender
-<p> </p>
-    <ol>
-        <li>React js</li>
-        <li>React Hooks</li>
-        <li>Node js </li>
-        <li>Express js</li>
-        <li>React Query</li>
-        <li>Mongodb</li>
-        <li>Firebase</li>
-        <li>JWT</li>
-        <li>Stripe</li>
-        <li>sendGrid email sender</li>
-    </ol>
+**Server:** Node, Express, MongoDB, sendGrid email sender.
 
 <p>Features and functionality list implement for admin and users  -</p>
    <ol>
