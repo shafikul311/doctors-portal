@@ -28,9 +28,10 @@
 
 ## Installation
 
-Install my-project with npm
+Install doctors-portals with npm
 
 ```bash
+  npm install doctors-portals
   npm install doctors-portals-client
   cd doctors-portals-client
   npm start
