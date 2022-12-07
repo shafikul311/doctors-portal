@@ -25,4 +25,14 @@
        
     
 <p> User and company will be benefited using this website. data info secured dashboard and secured payment system and easyly can booking a service what he/she want. </p>
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install doctors-portals-client
+  cd doctors-portals-client
+  npm start
+```
 <p> More Update will coming soon ..</p>
