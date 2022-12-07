@@ -7,17 +7,15 @@
 
 **Server:** Node, Express, MongoDB, sendGrid email sender.
 
-<p>Features and functionality list implement for admin and users  -</p>
-   <ol>
-        <li>Have a secured dashboard for users and admin will see different options under their role .  </li>
-        <li>Admin can add doctor , delete doctor . </li>
-        <li>Authenticated users can book appointment. </li>
-        <li>user will get auto email for their booking confirmation.</li>
-        <li>Authenticated user can pay for the booking using Card payment system.  </li>
-        </ol>
-       
+## Features and functionality list implement for admin and users 
+
+- Have a secured dashboard for users and admin will see different options under their role .
+- Admin can add doctor , delete doctor .
+- Authenticated users can book appointment.
+- user will get auto email for their booking confirmation.
+- Authenticated user can pay for the booking using Card payment system.
     
-<p> User and company will be benefited using this website. data info secured dashboard and secured payment system and easyly can booking a service what he/she want. </p>
+### <p> User and company will be benefited using this website. data info secured dashboard and secured payment system and easyly can booking a service what he/she want. </p>
 
 ## Installation
 
